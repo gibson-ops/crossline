@@ -1,0 +1,23 @@
+# deps
+node_modules/
+.pnp.*
+
+# env / secrets
+.env
+.env.*
+!.env.example
+.infisical.json
+
+# build output
+dist/
+build/
+.react-router/
+.output/
+.vercel/
+*.tsbuildinfo
+
+# misc
+*.log
+.DS_Store
+.turbo/
+coverage/

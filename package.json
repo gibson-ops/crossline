@@ -1,0 +1,26 @@
+{
+  "name": "crossline",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "web",
+    "engine",
+    "shared"
+  ],
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "dev:web": "npm --workspace web run dev",
+    "dev:engine": "npm --workspace engine run dev",
+    "instant:push": "instant-cli push",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@instantdb/core": "^1.0.49"
+  },
+  "devDependencies": {
+    "tsx": "^4.23.0",
+    "vitest": "^4.1.9"
+  }
+}

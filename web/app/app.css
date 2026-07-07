@@ -1,0 +1,184 @@
+@import 'tailwindcss';
+@import '@fontsource-variable/onest';
+
+/* ---------------------------------------------------------------------------
+   Crossline design tokens — "warm-stone precision"
+   One calm page. Warm-tinted neutrals (never pure white/black), ink-colored
+   actions (no product-blue), and the partner orgs' own brand colors as the
+   only vivid color on the surface: ownership IS the color system.
+   Light-first (bright-office daytime ritual); dark supported from the start.
+--------------------------------------------------------------------------- */
+:root {
+  /* surfaces */
+  --surface: oklch(0.985 0.006 80);
+  --surface-raised: oklch(0.998 0.003 85);
+  --surface-sunken: oklch(0.962 0.008 78);
+
+  /* text */
+  --ink: oklch(0.26 0.014 60);
+  --ink-muted: oklch(0.5 0.018 60);
+  /* faint must still clear ~4.5:1 on --surface: 13px meta text (dates) uses it */
+  --ink-faint: oklch(0.55 0.016 62);
+  --ink-inverse: oklch(0.985 0.006 80);
+
+  /* lines */
+  --line: oklch(0.905 0.009 75);
+  --line-strong: oklch(0.82 0.012 75);
+
+  /* interaction */
+  --action: oklch(0.3 0.02 60);
+  --action-hover: oklch(0.22 0.018 60);
+  --focus-ring: oklch(0.58 0.1 70);
+
+  /* semantics */
+  --danger: oklch(0.54 0.18 32);
+  --danger-soft: oklch(0.94 0.03 32);
+  --ok: oklch(0.55 0.11 155);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: oklch(0.225 0.012 62);
+    --surface-raised: oklch(0.262 0.012 62);
+    --surface-sunken: oklch(0.195 0.012 62);
+
+    --ink: oklch(0.93 0.009 80);
+    --ink-muted: oklch(0.71 0.012 75);
+    --ink-faint: oklch(0.62 0.012 72);
+    --ink-inverse: oklch(0.24 0.014 60);
+
+    --line: oklch(0.325 0.012 65);
+    --line-strong: oklch(0.42 0.014 65);
+
+    --action: oklch(0.9 0.012 80);
+    --action-hover: oklch(0.97 0.008 82);
+    --focus-ring: oklch(0.74 0.09 75);
+
+    --danger: oklch(0.68 0.15 32);
+    --danger-soft: oklch(0.32 0.05 32);
+    --ok: oklch(0.7 0.1 155);
+  }
+}
+
+@theme inline {
+  --font-sans: 'Onest Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --color-surface: var(--surface);
+  --color-raised: var(--surface-raised);
+  --color-sunken: var(--surface-sunken);
+  --color-ink: var(--ink);
+  --color-ink-muted: var(--ink-muted);
+  --color-ink-faint: var(--ink-faint);
+  --color-ink-inverse: var(--ink-inverse);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-action: var(--action);
+  --color-action-hover: var(--action-hover);
+  --color-focus: var(--focus-ring);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-ok: var(--ok);
+
+  /* fixed rem type scale, ~1.2 ratio */
+  --text-meta: 0.8125rem; /* 13 — chips, dates, counts */
+  --text-body: 0.9375rem; /* 15 — rows, controls */
+  --text-title: 1.0625rem; /* 17 — org headers */
+  --text-page: 1.375rem; /* 22 — page heading */
+
+  --radius-row: 0.625rem;
+  --radius-field: 0.625rem;
+
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+html,
+body {
+  background-color: var(--surface);
+  color: var(--ink);
+  font-family: 'Onest Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  @media (prefers-color-scheme: dark) {
+    color-scheme: dark;
+  }
+}
+
+/* Visible, warm focus for keyboard users everywhere. */
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+/* Gentle enter for content swaps (scope toggle, composer open). */
+@keyframes fade-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.fade-rise {
+  animation: fade-rise 240ms var(--ease-out-quart);
+}
+
+/* Check-mark pop when a task is completed. */
+@keyframes check-pop {
+  from {
+    transform: scale(0.4);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.check-pop {
+  display: inline-flex;
+  animation: check-pop 200ms var(--ease-out-quart);
+}
+
+/* Top navigation progress bar (SSR page loads). */
+@keyframes nav-progress {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 62%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.nav-progress {
+  position: fixed;
+  inset-inline: 0;
+  top: 0;
+  z-index: 50;
+  height: 2px;
+  pointer-events: none;
+}
+.nav-progress > span {
+  display: block;
+  height: 100%;
+  background: var(--focus-ring);
+  width: 0;
+  transition: width 200ms var(--ease-out-quart), opacity 250ms ease 150ms;
+}
+.nav-progress[data-state='loading'] > span {
+  animation: nav-progress 1.4s var(--ease-out-quart) forwards;
+}
+.nav-progress[data-state='done'] > span {
+  width: 100%;
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

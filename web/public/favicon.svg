@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="oklch(0.26 0.014 60)"/>
+  <!-- two lines crossing company lines: the crossline mark -->
+  <path d="M16 44 L48 20" stroke="oklch(0.985 0.006 80)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M16 20 L48 44" stroke="oklch(0.72 0.11 70)" stroke-width="7" stroke-linecap="round"/>
+</svg>
