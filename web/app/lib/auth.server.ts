@@ -2,7 +2,7 @@
 // Auth credentials/sessions live in OUR Neon Postgres (clean SQL we own);
 // app-side identity (profiles) lives in InstantDB, linked by email → $user.
 import { betterAuth } from 'better-auth';
-import { magicLink } from 'better-auth/plugins';
+import { magicLink, mcp, jwt } from 'better-auth/plugins';
 import pg from 'pg';
 
 const connectionString = process.env.NEON_DEFAULT_CONNECTION_STRING;
@@ -54,6 +54,12 @@ async function sendMagicLinkEmail(email: string, url: string) {
   if (!res.ok) throw new Error(`Resend failed: ${res.status} ${await res.text()}`);
 }
 
+/** Resolve a Better Auth user id (from an OAuth access token) to its email. */
+export async function getUserEmailById(userId: string): Promise<string | null> {
+  const res = await pool.query('SELECT email FROM "user" WHERE id = $1 LIMIT 1', [userId]);
+  return res.rows[0]?.email ?? null;
+}
+
 export const auth = betterAuth({
   database: pool,
   secret: process.env.BETTER_AUTH_SECRET,
@@ -82,6 +88,16 @@ export const auth = betterAuth({
         const link = `${base}/verify-signin?token=${encodeURIComponent(token)}`;
         await sendMagicLinkEmail(email, link);
       },
+    }),
+    // JWKS for token verification (published at /api/auth/jwks).
+    jwt(),
+    // Turns Better Auth into the OAuth 2.1 / OIDC authorization server for MCP:
+    // dynamic client registration, PKCE authorize/token, and consent — with our
+    // existing magic-link page as the login step. The MCP resource server lives
+    // at /api/mcp (same web service; see routes/api.mcp.ts).
+    mcp({
+      loginPage: '/login',
+      resource: `${process.env.BETTER_AUTH_URL ?? 'http://localhost:5173'}/api/mcp`,
     }),
   ],
 });

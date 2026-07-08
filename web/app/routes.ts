@@ -8,4 +8,7 @@ export default [
   route('verify-signin', 'routes/verify-signin.tsx'),
   route('api/auth/*', 'routes/api.auth.$.tsx'),
   route('api/instant-token', 'routes/api.instant-token.tsx'),
+  route('.well-known/oauth-authorization-server', 'routes/well-known.oauth-authorization-server.tsx'),
+  route('.well-known/oauth-protected-resource', 'routes/well-known.oauth-protected-resource.tsx'),
+  route('api/mcp', 'routes/api.mcp.tsx'),
 ] satisfies RouteConfig;
