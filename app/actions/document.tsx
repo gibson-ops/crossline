@@ -7,21 +7,23 @@ export interface DocumentProps {
   children?: RemixNode
   /** The page's own title; the app name is appended. */
   title?: string
+  /** Forces a theme by name (`winter` or `dark`). Without it, the device's setting decides. */
+  theme?: string
 }
 
 const APP_NAME = 'Crossline'
 
 /**
- * The shared HTML shell. The theme is not set here: the stylesheet makes Winter the default
- * and switches to the dark theme when the device asks for dark (styles/app.css).
+ * The shared HTML shell. Normally the theme is not set here: the stylesheet makes Winter the
+ * default and switches to the dark theme when the device asks for dark (styles/app.css).
  */
 export function Document(handle: Handle<DocumentProps>) {
   return () => {
-    const { children, title } = handle.props
+    const { children, title, theme } = handle.props
     const { href, importMap, preloads } = scriptEntry
 
     return (
-      <html lang="en">
+      <html lang="en" data-theme={theme}>
         <head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

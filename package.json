@@ -7,6 +7,7 @@
     "db:down": "docker compose down",
     "css": "tailwindcss -i styles/app.css -o public/app.css --minify",
     "css:watch": "tailwindcss -i styles/app.css -o public/app.css --watch",
+    "email:theme": "node scripts/email-theme.mjs && prettier --write app/email/theme.generated.ts",
     "build": "npm run css",
     "dev": "npm run css && NODE_ENV=development node --env-file-if-exists=.env --watch --import remix/node-tsx server.ts",
     "hmr": "npm run css && NODE_ENV=development node --env-file-if-exists=.env hmr.ts",
@@ -24,14 +25,17 @@
   },
   "dependencies": {
     "effect": "4.1.2",
+    "mjml": "5.4.1",
     "pg": "8.23.1",
     "remix": "3.2.0"
   },
   "devDependencies": {
     "@tailwindcss/cli": "4.3.5",
+    "@types/mjml": "5.4.2",
     "@types/node": "26.6.6",
     "@types/pg": "8.23.1",
     "daisyui": "5.7.50",
+    "lightningcss": "1.33.0",
     "oxlint": "1.92.0",
     "prettier": "3.9.10",
     "tailwindcss": "4.3.5",

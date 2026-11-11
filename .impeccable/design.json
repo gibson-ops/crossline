@@ -1,0 +1,537 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-11T15:22:18.593Z",
+  "title": "Design System: Crossline",
+  "extensions": {
+    "colorMeta": {
+      "base-100": {
+        "role": "neutral",
+        "displayName": "Surface White",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0.000 0)",
+          "oklch(27% 0.000 0)",
+          "oklch(38% 0.000 0)",
+          "oklch(50% 0.000 0)",
+          "oklch(62% 0.000 0)",
+          "oklch(74% 0.000 0)",
+          "oklch(85% 0.000 0)",
+          "oklch(95% 0.000 0)"
+        ]
+      },
+      "dark-base-100": {
+        "role": "neutral",
+        "displayName": "Dark Surface White",
+        "canonical": "oklch(25.33% 0.016 252.42)",
+        "tonalRamp": [
+          "oklch(15% 0.006 252.42)",
+          "oklch(27% 0.011 252.42)",
+          "oklch(38% 0.016 252.42)",
+          "oklch(50% 0.016 252.42)",
+          "oklch(62% 0.016 252.42)",
+          "oklch(74% 0.016 252.42)",
+          "oklch(85% 0.011 252.42)",
+          "oklch(95% 0.006 252.42)"
+        ]
+      },
+      "base-200": {
+        "role": "neutral",
+        "displayName": "Page Frost",
+        "canonical": "oklch(97.466% 0.011 259.822)",
+        "tonalRamp": [
+          "oklch(15% 0.004 259.822)",
+          "oklch(27% 0.008 259.822)",
+          "oklch(38% 0.011 259.822)",
+          "oklch(50% 0.011 259.822)",
+          "oklch(62% 0.011 259.822)",
+          "oklch(74% 0.011 259.822)",
+          "oklch(85% 0.008 259.822)",
+          "oklch(95% 0.004 259.822)"
+        ]
+      },
+      "dark-base-200": {
+        "role": "neutral",
+        "displayName": "Dark Page Frost",
+        "canonical": "oklch(23.26% 0.014 253.1)",
+        "tonalRamp": [
+          "oklch(15% 0.006 253.1)",
+          "oklch(27% 0.010 253.1)",
+          "oklch(38% 0.014 253.1)",
+          "oklch(50% 0.014 253.1)",
+          "oklch(62% 0.014 253.1)",
+          "oklch(74% 0.014 253.1)",
+          "oklch(85% 0.010 253.1)",
+          "oklch(95% 0.006 253.1)"
+        ]
+      },
+      "base-300": {
+        "role": "neutral",
+        "displayName": "Rule Blue-Gray",
+        "canonical": "oklch(93.268% 0.016 262.751)",
+        "tonalRamp": [
+          "oklch(15% 0.006 262.751)",
+          "oklch(27% 0.011 262.751)",
+          "oklch(38% 0.016 262.751)",
+          "oklch(50% 0.016 262.751)",
+          "oklch(62% 0.016 262.751)",
+          "oklch(74% 0.016 262.751)",
+          "oklch(85% 0.011 262.751)",
+          "oklch(95% 0.006 262.751)"
+        ]
+      },
+      "dark-base-300": {
+        "role": "neutral",
+        "displayName": "Dark Rule Blue-Gray",
+        "canonical": "oklch(21.15% 0.012 254.09)",
+        "tonalRamp": [
+          "oklch(15% 0.005 254.09)",
+          "oklch(27% 0.008 254.09)",
+          "oklch(38% 0.012 254.09)",
+          "oklch(50% 0.012 254.09)",
+          "oklch(62% 0.012 254.09)",
+          "oklch(74% 0.012 254.09)",
+          "oklch(85% 0.008 254.09)",
+          "oklch(95% 0.005 254.09)"
+        ]
+      },
+      "base-content": {
+        "role": "neutral",
+        "displayName": "Slate Text",
+        "canonical": "oklch(41.886% 0.053 255.824)",
+        "tonalRamp": [
+          "oklch(15% 0.021 255.824)",
+          "oklch(27% 0.037 255.824)",
+          "oklch(38% 0.053 255.824)",
+          "oklch(50% 0.053 255.824)",
+          "oklch(62% 0.053 255.824)",
+          "oklch(74% 0.053 255.824)",
+          "oklch(85% 0.037 255.824)",
+          "oklch(95% 0.021 255.824)"
+        ]
+      },
+      "dark-base-content": {
+        "role": "neutral",
+        "displayName": "Dark Slate Text",
+        "canonical": "oklch(97.807% 0.029 256.847)",
+        "tonalRamp": [
+          "oklch(15% 0.012 256.847)",
+          "oklch(27% 0.020 256.847)",
+          "oklch(38% 0.029 256.847)",
+          "oklch(50% 0.029 256.847)",
+          "oklch(62% 0.029 256.847)",
+          "oklch(74% 0.029 256.847)",
+          "oklch(85% 0.020 256.847)",
+          "oklch(95% 0.012 256.847)"
+        ]
+      },
+      "primary": {
+        "role": "primary",
+        "displayName": "Action Blue",
+        "canonical": "oklch(56.86% 0.255 257.57)",
+        "tonalRamp": [
+          "oklch(15% 0.102 257.57)",
+          "oklch(27% 0.178 257.57)",
+          "oklch(38% 0.255 257.57)",
+          "oklch(50% 0.255 257.57)",
+          "oklch(62% 0.255 257.57)",
+          "oklch(74% 0.255 257.57)",
+          "oklch(85% 0.178 257.57)",
+          "oklch(95% 0.102 257.57)"
+        ]
+      },
+      "dark-primary": {
+        "role": "primary",
+        "displayName": "Dark Action Blue",
+        "canonical": "oklch(58% 0.233 277.117)",
+        "tonalRamp": [
+          "oklch(15% 0.093 277.117)",
+          "oklch(27% 0.163 277.117)",
+          "oklch(38% 0.233 277.117)",
+          "oklch(50% 0.233 277.117)",
+          "oklch(62% 0.233 277.117)",
+          "oklch(74% 0.233 277.117)",
+          "oklch(85% 0.163 277.117)",
+          "oklch(95% 0.093 277.117)"
+        ]
+      },
+      "primary-content": {
+        "role": "primary",
+        "displayName": "Primary Label",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0.000 0)",
+          "oklch(27% 0.000 0)",
+          "oklch(38% 0.000 0)",
+          "oklch(50% 0.000 0)",
+          "oklch(62% 0.000 0)",
+          "oklch(74% 0.000 0)",
+          "oklch(85% 0.000 0)",
+          "oklch(95% 0.000 0)"
+        ]
+      },
+      "dark-primary-content": {
+        "role": "primary",
+        "displayName": "Dark Primary Label",
+        "canonical": "oklch(100% 0 0)",
+        "tonalRamp": [
+          "oklch(15% 0.007 272.314)",
+          "oklch(27% 0.013 272.314)",
+          "oklch(38% 0.018 272.314)",
+          "oklch(50% 0.018 272.314)",
+          "oklch(62% 0.018 272.314)",
+          "oklch(74% 0.018 272.314)",
+          "oklch(85% 0.013 272.314)",
+          "oklch(95% 0.007 272.314)"
+        ]
+      },
+      "neutral": {
+        "role": "neutral",
+        "displayName": "Ink Navy",
+        "canonical": "oklch(19.616% 0.063 257.651)",
+        "tonalRamp": [
+          "oklch(15% 0.025 257.651)",
+          "oklch(27% 0.044 257.651)",
+          "oklch(38% 0.063 257.651)",
+          "oklch(50% 0.063 257.651)",
+          "oklch(62% 0.063 257.651)",
+          "oklch(74% 0.063 257.651)",
+          "oklch(85% 0.044 257.651)",
+          "oklch(95% 0.025 257.651)"
+        ]
+      },
+      "dark-neutral": {
+        "role": "neutral",
+        "displayName": "Dark Ink Navy",
+        "canonical": "oklch(92% 0.02 257)",
+        "tonalRamp": [
+          "oklch(15% 0.008 257)",
+          "oklch(27% 0.014 257)",
+          "oklch(38% 0.020 257)",
+          "oklch(50% 0.020 257)",
+          "oklch(62% 0.020 257)",
+          "oklch(74% 0.020 257)",
+          "oklch(85% 0.014 257)",
+          "oklch(95% 0.008 257)"
+        ]
+      },
+      "neutral-content": {
+        "role": "neutral",
+        "displayName": "Ink Navy Label",
+        "canonical": "oklch(83.923% 0.012 257.651)",
+        "tonalRamp": [
+          "oklch(15% 0.005 257.651)",
+          "oklch(27% 0.008 257.651)",
+          "oklch(38% 0.012 257.651)",
+          "oklch(50% 0.012 257.651)",
+          "oklch(62% 0.012 257.651)",
+          "oklch(74% 0.012 257.651)",
+          "oklch(85% 0.008 257.651)",
+          "oklch(95% 0.005 257.651)"
+        ]
+      },
+      "dark-neutral-content": {
+        "role": "neutral",
+        "displayName": "Dark Ink Navy Label",
+        "canonical": "oklch(22% 0.03 257)",
+        "tonalRamp": [
+          "oklch(15% 0.012 257)",
+          "oklch(27% 0.021 257)",
+          "oklch(38% 0.030 257)",
+          "oklch(50% 0.030 257)",
+          "oklch(62% 0.030 257)",
+          "oklch(74% 0.030 257)",
+          "oklch(85% 0.021 257)",
+          "oklch(95% 0.012 257)"
+        ]
+      },
+      "success": {
+        "role": "tertiary",
+        "displayName": "Status: done",
+        "canonical": "oklch(58% 0.13 165)",
+        "tonalRamp": [
+          "oklch(15% 0.052 165)",
+          "oklch(27% 0.091 165)",
+          "oklch(38% 0.130 165)",
+          "oklch(50% 0.130 165)",
+          "oklch(62% 0.130 165)",
+          "oklch(74% 0.130 165)",
+          "oklch(85% 0.091 165)",
+          "oklch(95% 0.052 165)"
+        ]
+      },
+      "dark-success": {
+        "role": "tertiary",
+        "displayName": "Dark Status: done",
+        "canonical": "oklch(76% 0.177 163.223)",
+        "tonalRamp": [
+          "oklch(15% 0.071 163.223)",
+          "oklch(27% 0.124 163.223)",
+          "oklch(38% 0.177 163.223)",
+          "oklch(50% 0.177 163.223)",
+          "oklch(62% 0.177 163.223)",
+          "oklch(74% 0.177 163.223)",
+          "oklch(85% 0.124 163.223)",
+          "oklch(95% 0.071 163.223)"
+        ]
+      },
+      "warning": {
+        "role": "tertiary",
+        "displayName": "Status: waits on you",
+        "canonical": "oklch(64% 0.15 65)",
+        "tonalRamp": [
+          "oklch(15% 0.060 65)",
+          "oklch(27% 0.105 65)",
+          "oklch(38% 0.150 65)",
+          "oklch(50% 0.150 65)",
+          "oklch(62% 0.150 65)",
+          "oklch(74% 0.150 65)",
+          "oklch(85% 0.105 65)",
+          "oklch(95% 0.060 65)"
+        ]
+      },
+      "dark-warning": {
+        "role": "tertiary",
+        "displayName": "Dark Status: waits on you",
+        "canonical": "oklch(82% 0.189 84.429)",
+        "tonalRamp": [
+          "oklch(15% 0.076 84.429)",
+          "oklch(27% 0.132 84.429)",
+          "oklch(38% 0.189 84.429)",
+          "oklch(50% 0.189 84.429)",
+          "oklch(62% 0.189 84.429)",
+          "oklch(74% 0.189 84.429)",
+          "oklch(85% 0.132 84.429)",
+          "oklch(95% 0.076 84.429)"
+        ]
+      },
+      "error": {
+        "role": "tertiary",
+        "displayName": "Status: due or failed",
+        "canonical": "oklch(58% 0.21 25)",
+        "tonalRamp": [
+          "oklch(15% 0.084 25)",
+          "oklch(27% 0.147 25)",
+          "oklch(38% 0.210 25)",
+          "oklch(50% 0.210 25)",
+          "oklch(62% 0.210 25)",
+          "oklch(74% 0.210 25)",
+          "oklch(85% 0.147 25)",
+          "oklch(95% 0.084 25)"
+        ]
+      },
+      "dark-error": {
+        "role": "tertiary",
+        "displayName": "Dark Status: due or failed",
+        "canonical": "oklch(71% 0.194 13.428)",
+        "tonalRamp": [
+          "oklch(15% 0.078 13.428)",
+          "oklch(27% 0.136 13.428)",
+          "oklch(38% 0.194 13.428)",
+          "oklch(50% 0.194 13.428)",
+          "oklch(62% 0.194 13.428)",
+          "oklch(74% 0.194 13.428)",
+          "oklch(85% 0.136 13.428)",
+          "oklch(95% 0.078 13.428)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "The page title, once per page."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Pane title, the question in call review, the wordmark."
+      },
+      "heading": {
+        "displayName": "Heading",
+        "purpose": "Group headings and section headings inside a pane."
+      },
+      "row-title": {
+        "displayName": "Row title",
+        "purpose": "Row titles, names, legends, the lead words of a suggestion."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text, quotes, notices."
+      },
+      "detail": {
+        "displayName": "Detail",
+        "purpose": "The line under a title, hints, quote headers and footers, badge text. Shown at 80% of the text color."
+      },
+      "button-label": {
+        "displayName": "Button label",
+        "purpose": "daisyUI's button text: 12px at sm, 11px at xs."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-state",
+        "value": "0.2s cubic-bezier(0, 0, 0.2, 1)",
+        "purpose": "daisyUI's own transition on button color and border. The build adds no motion of its own."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "lg",
+        "value": "1024px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The one main action on a screen.",
+      "html": "<button class=\"ds-btn-primary\">Mark done</button>",
+      "css": ".ds-btn-primary { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 2rem; padding: 0 12px; font-size: 0.75rem; font-weight: 600; border: 1px solid var(--color-primary, oklch(56.86% 0.255 257.57)); border-radius: 0.5rem; background: var(--color-primary, oklch(56.86% 0.255 257.57)); color: var(--color-primary-content, oklch(100% 0 0)); cursor: pointer; transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1), border-color 0.2s cubic-bezier(0, 0, 0.2, 1); } .ds-btn-primary:hover { background: color-mix(in oklab, var(--color-primary, oklch(56.86% 0.255 257.57)) 93%, #000); border-color: color-mix(in oklab, var(--color-primary, oklch(56.86% 0.255 257.57)) 93%, #000); } .ds-btn-primary:focus-visible { outline: 2px solid var(--color-primary, oklch(56.86% 0.255 257.57)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Neutral Button",
+      "kind": "button",
+      "refersTo": "button-neutral",
+      "description": "A firm choice, or the current item in a set.",
+      "html": "<button class=\"ds-btn-neutral\">Keep here</button>",
+      "css": ".ds-btn-neutral { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 2rem; padding: 0 12px; font-size: 0.75rem; font-weight: 600; border: 1px solid var(--color-neutral, oklch(19.616% 0.063 257.651)); border-radius: 0.5rem; background: var(--color-neutral, oklch(19.616% 0.063 257.651)); color: var(--color-neutral-content, oklch(83.923% 0.012 257.651)); cursor: pointer; transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1), border-color 0.2s cubic-bezier(0, 0, 0.2, 1); } .ds-btn-neutral:hover { background: color-mix(in oklab, var(--color-neutral, oklch(19.616% 0.063 257.651)) 93%, #000); border-color: color-mix(in oklab, var(--color-neutral, oklch(19.616% 0.063 257.651)) 93%, #000); } .ds-btn-neutral:focus-visible { outline: 2px solid var(--color-neutral, oklch(19.616% 0.063 257.651)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Plain Button",
+      "kind": "button",
+      "refersTo": "button-plain",
+      "description": "Every other action.",
+      "html": "<button class=\"ds-btn-plain\">Snooze</button>",
+      "css": ".ds-btn-plain { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; justify-content: center; gap: 6px; height: 2rem; padding: 0 12px; font-size: 0.75rem; font-weight: 600; border: 1px solid var(--color-base-200, oklch(97.466% 0.011 259.822)); border-radius: 0.5rem; background: var(--color-base-200, oklch(97.466% 0.011 259.822)); color: var(--color-base-content, oklch(41.886% 0.053 255.824)); cursor: pointer; transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1), border-color 0.2s cubic-bezier(0, 0, 0.2, 1); } .ds-btn-plain:hover { background: color-mix(in oklab, var(--color-base-200, oklch(97.466% 0.011 259.822)) 93%, #000); border-color: color-mix(in oklab, var(--color-base-200, oklch(97.466% 0.011 259.822)) 93%, #000); } .ds-btn-plain:focus-visible { outline: 2px solid var(--color-base-200, oklch(97.466% 0.011 259.822)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "description": "The least commitment, and the square close button.",
+      "html": "<button class=\"ds-btn-ghost\">Not sure</button>",
+      "css": ".ds-btn-ghost { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; display: inline-flex; align-items: center; height: 2rem; padding: 0 12px; font-size: 0.75rem; font-weight: 600; border: 1px solid transparent; border-radius: 0.5rem; background: transparent; color: var(--color-base-content, oklch(41.886% 0.053 255.824)); cursor: pointer; transition: background-color 0.2s cubic-bezier(0, 0, 0.2, 1); } .ds-btn-ghost:hover { background: var(--color-base-200, oklch(97.466% 0.011 259.822)); } .ds-btn-ghost:focus-visible { outline: 2px solid var(--color-base-content, oklch(41.886% 0.053 255.824)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Group and Rows",
+      "kind": "card",
+      "refersTo": "row",
+      "description": "A titled list on one bordered surface: a do-now row with its quote, and the open row.",
+      "html": "<section class=\"ds-group\"><h2 class=\"ds-group-title\">Do now <span class=\"ds-group-count\">2</span></h2><ul class=\"ds-list\"><li class=\"ds-row\"><input type=\"checkbox\" class=\"ds-check\" aria-label=\"Mark done\"><div><div class=\"ds-row-title\">Send the revised quote for the renewal</div><div class=\"ds-detail\"><span class=\"ds-kind\">Reply owed</span><span>Email from Dana Reyes</span><span class=\"ds-due-now\"><span class=\"ds-dot ds-dot-error\"></span>Due today</span><span>Size S</span></div></div><p class=\"ds-row-quote\"><b>Dana Reyes:</b> Can you get me the revised number by Tuesday?</p></li><li class=\"ds-row ds-row-open\"><input type=\"checkbox\" class=\"ds-check\" aria-label=\"Mark done\"><div><div class=\"ds-row-title\">The open row</div><div class=\"ds-detail\"><span>Weekly team sync</span><span>Due Fri, Nov 13</span><span>Size L</span></div></div></li></ul></section>",
+      "css": ".ds-group { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; color: var(--color-base-content, oklch(41.886% 0.053 255.824)); max-width: 34rem; } .ds-group-title { margin: 0 0 6px; padding: 0 4px; font-size: 0.875rem; font-weight: 600; display: flex; gap: 8px; align-items: baseline; } .ds-group-count { font-weight: 400; color: color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 80%, transparent); } .ds-list { list-style: none; margin: 0; padding: 0; background: var(--color-base-100, oklch(100% 0 0)); border: 1px solid var(--color-base-300, oklch(93.268% 0.016 262.751)); border-radius: 1rem; } .ds-row { display: grid; grid-template-columns: auto 1fr; align-items: center; gap: 12px; padding: 8px 12px; border-radius: 1rem; } .ds-row + .ds-row { box-shadow: inset 0 1px 0 var(--color-base-300, oklch(93.268% 0.016 262.751)); border-top-left-radius: 0; border-top-right-radius: 0; } .ds-row-open { background: color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 8%, transparent); } .ds-check { appearance: none; width: 1.25rem; height: 1.25rem; margin: 0; border: 1px solid color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 65%, transparent); border-radius: 1rem; background: transparent; cursor: pointer; } .ds-check:focus-visible { outline: 2px solid var(--color-base-content, oklch(41.886% 0.053 255.824)); outline-offset: 2px; } .ds-row-title { font-size: 0.875rem; font-weight: 500; } .ds-detail { margin-top: 2px; display: flex; flex-wrap: wrap; align-items: center; gap: 2px 8px; font-size: 0.75rem; color: color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 80%, transparent); } .ds-kind { display: inline-flex; align-items: center; height: 1.25rem; padding: 0 9px; border-radius: 1rem; background: var(--color-base-200, oklch(97.466% 0.011 259.822)); color: var(--color-base-content, oklch(41.886% 0.053 255.824)); font-size: 0.75rem; } .ds-due-now { display: inline-flex; align-items: center; gap: 4px; font-weight: 500; color: var(--color-base-content, oklch(41.886% 0.053 255.824)); } .ds-dot { display: inline-block; width: 0.5rem; height: 0.5rem; border-radius: 1rem; } .ds-dot-error { background: var(--color-error, oklch(58% 0.21 25)); } .ds-row-quote { grid-column: 2; margin: 0; padding: 4px 16px; width: fit-content; max-width: 100%; background: var(--color-base-300, oklch(93.268% 0.016 262.751)); border-radius: 0.5rem; border-end-start-radius: 0; font-size: 0.875rem; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; } .ds-row-quote b { font-weight: 500; }"
+    },
+    {
+      "name": "Quote",
+      "kind": "custom",
+      "refersTo": "quote-bubble",
+      "description": "The line a to-do came from, as a filled speech bubble. The viewer sits on the right; the marked line is neutral.",
+      "html": "<div class=\"ds-quote\"><div class=\"ds-quote-head\"><b>Dana Reyes</b> <time>Mon, Nov 9</time></div><div class=\"ds-quote-bubble\">Can you get me the revised number by Tuesday? I present it Wednesday morning.</div></div><div class=\"ds-quote ds-quote-mine\"><div class=\"ds-quote-head\"><b>Morgan Ellis</b> <time>14:32</time></div><div class=\"ds-quote-bubble ds-quote-marked\">I'll confirm the Thursday demo slot with them first thing tomorrow.</div><div class=\"ds-quote-note\">The recorder labeled this Priya Shah</div></div>",
+      "css": ".ds-quote { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; color: var(--color-base-content, oklch(41.886% 0.053 255.824)); display: flex; flex-direction: column; align-items: flex-start; padding: 4px 0; max-width: 32rem; } .ds-quote-mine { align-items: flex-end; } .ds-quote-head { margin-bottom: 2px; font-size: 0.75rem; } .ds-quote-head b { font-weight: 500; } .ds-quote-head time, .ds-quote-note { color: color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 80%, transparent); } .ds-quote-bubble { max-width: 90%; padding: 8px 16px; background: var(--color-base-300, oklch(93.268% 0.016 262.751)); border-radius: 0.5rem; border-end-start-radius: 0; font-size: 0.875rem; line-height: 1.43; } .ds-quote-mine .ds-quote-bubble { border-end-start-radius: 0.5rem; border-end-end-radius: 0; } .ds-quote-marked { background: var(--color-neutral, oklch(19.616% 0.063 257.651)); color: var(--color-neutral-content, oklch(83.923% 0.012 257.651)); } .ds-quote-note { margin-top: 2px; font-size: 0.75rem; }"
+    },
+    {
+      "name": "Suggestion",
+      "kind": "custom",
+      "refersTo": "suggestion",
+      "description": "The app proposing a change: a dashed outline with its two answers. Never filled.",
+      "html": "<div class=\"ds-suggestion\"><span class=\"ds-suggestion-text\"><b>Suggested for Next.</b> Due in 6 days, and a size M needs about a week.</span><span class=\"ds-suggestion-actions\"><button class=\"ds-xs ds-xs-neutral\">Keep here</button><button class=\"ds-xs\">Move back</button></span></div>",
+      "css": ".ds-suggestion { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; max-width: 34rem; padding: 6px 12px; border: 1px dashed color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 40%, transparent); border-radius: 0.5rem; color: var(--color-base-content, oklch(41.886% 0.053 255.824)); font-size: 0.875rem; } .ds-suggestion-text { flex: 1 1 14rem; } .ds-suggestion-text b { font-weight: 500; } .ds-suggestion-actions { display: flex; gap: 8px; } .ds-xs { font: inherit; height: 1.5rem; padding: 0 8px; font-size: 0.6875rem; font-weight: 600; border: 1px solid var(--color-base-200, oklch(97.466% 0.011 259.822)); border-radius: 0.5rem; background: var(--color-base-200, oklch(97.466% 0.011 259.822)); color: var(--color-base-content, oklch(41.886% 0.053 255.824)); cursor: pointer; } .ds-xs-neutral { background: var(--color-neutral, oklch(19.616% 0.063 257.651)); border-color: var(--color-neutral, oklch(19.616% 0.063 257.651)); color: var(--color-neutral-content, oklch(83.923% 0.012 257.651)); } .ds-xs:hover { filter: brightness(0.95); } .ds-xs:focus-visible { outline: 2px solid var(--color-base-content, oklch(41.886% 0.053 255.824)); outline-offset: 2px; }"
+    },
+    {
+      "name": "Status, Badge and Person Chip",
+      "kind": "chip",
+      "refersTo": "person-chip",
+      "description": "Status as a dot with words in the text color; a kind badge; a person as avatar and name.",
+      "html": "<div class=\"ds-marks\"><span class=\"ds-status\"><span class=\"ds-sdot ds-sdot-success\"></span>Added</span><span class=\"ds-status\"><span class=\"ds-sdot ds-sdot-warning\"></span>Waits on you</span><span class=\"ds-status\"><span class=\"ds-sdot ds-sdot-error\"></span>Due today</span><span class=\"ds-badge\">Follow-up</span><span class=\"ds-chip\"><span class=\"ds-avatar\">ME</span>Morgan Ellis</span></div>",
+      "css": ".ds-marks { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; color: var(--color-base-content, oklch(41.886% 0.053 255.824)); font-size: 0.875rem; } .ds-status { display: inline-flex; align-items: center; gap: 6px; } .ds-sdot { width: 0.5rem; height: 0.5rem; border-radius: 1rem; } .ds-sdot-success { background: var(--color-success, oklch(58% 0.13 165)); } .ds-sdot-warning { background: var(--color-warning, oklch(64% 0.15 65)); } .ds-sdot-error { background: var(--color-error, oklch(58% 0.21 25)); } .ds-badge { display: inline-flex; align-items: center; height: 1.25rem; padding: 0 9px; border-radius: 1rem; background: var(--color-base-200, oklch(97.466% 0.011 259.822)); font-size: 0.75rem; } .ds-chip { display: inline-flex; align-items: center; gap: 6px; height: 1.75rem; padding: 0 10px 0 4px; border-radius: 1rem; background: var(--color-base-200, oklch(97.466% 0.011 259.822)); } .ds-avatar { display: inline-flex; align-items: center; justify-content: center; width: 1.25rem; height: 1.25rem; border-radius: 9999px; background: var(--color-neutral, oklch(19.616% 0.063 257.651)); color: var(--color-neutral-content, oklch(83.923% 0.012 257.651)); font-size: 0.625rem; }"
+    },
+    {
+      "name": "Field",
+      "kind": "input",
+      "refersTo": "field-input",
+      "description": "A labeled control with a 65% border; the error state takes the error color on the border only.",
+      "html": "<fieldset class=\"ds-field\"><legend>Due</legend><input class=\"ds-input\" type=\"text\" value=\"11/13/2026\" aria-label=\"Due\"><p class=\"ds-hint\">Pick a date that is today or later.</p></fieldset>",
+      "css": ".ds-field { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; border: 0; margin: 0; padding: 0; max-width: 16rem; color: var(--color-base-content, oklch(41.886% 0.053 255.824)); font-size: 0.75rem; } .ds-field legend { padding: 0 0 4px; font-weight: 600; } .ds-input { width: 100%; height: 2rem; padding: 0 12px; font: inherit; font-size: 0.75rem; color: var(--color-base-content, oklch(41.886% 0.053 255.824)); background: var(--color-base-100, oklch(100% 0 0)); border: 1px solid color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 65%, transparent); border-radius: 0.5rem; } .ds-input::placeholder { color: color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 80%, transparent); opacity: 1; } .ds-input:focus-visible { outline: 2px solid color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 65%, transparent); outline-offset: 2px; } .ds-input[aria-invalid=\"true\"] { border-color: var(--color-error, oklch(58% 0.21 25)); } .ds-hint { margin: 4px 0 0; color: color-mix(in oklab, var(--color-base-content, oklch(41.886% 0.053 255.824)) 80%, transparent); }"
+    },
+    {
+      "name": "Notice",
+      "kind": "custom",
+      "description": "The result of an action, shown next to the control that caused it.",
+      "html": "<div class=\"ds-notice ds-notice-done\" role=\"status\"><span class=\"ds-ndot\"></span><span>Moved to Next.</span></div><div class=\"ds-notice ds-notice-problem\" role=\"alert\"><span class=\"ds-ndot\"></span><span>That did not save: the due date changed since you opened it. Reload to see it.</span></div>",
+      "css": ".ds-notice { font-family: ui-sans-serif, system-ui, sans-serif; font-variant-numeric: tabular-nums; --ds-tone: var(--color-success, oklch(58% 0.13 165)); display: flex; align-items: flex-start; gap: 8px; max-width: 34rem; margin-bottom: 8px; padding: 8px 12px; border-radius: 1rem; background: color-mix(in oklab, var(--ds-tone) 8%, var(--color-base-100, oklch(100% 0 0))); color: var(--color-base-content, oklch(41.886% 0.053 255.824)); font-size: 0.875rem; } .ds-notice-problem { --ds-tone: var(--color-error, oklch(58% 0.21 25)); } .ds-ndot { flex-shrink: 0; width: 0.5rem; height: 0.5rem; margin-top: 6px; border-radius: 1rem; background: var(--ds-tone); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Quoted Promise",
+    "overview": "Crossline shows a promise with the words it came from. The quote is the one loud shape in the system: a filled speech bubble, on the to-do, in call review and in the morning email. Everything around it is quiet so the quote and the day's order are what the eye finds.\n\nThe look is daisyUI 5 on Tailwind 4. Light mode is daisyUI's Winter with five values changed for contrast. Dark mode is daisyUI's Dark colors with Winter's corner sizes and flat look, and a light neutral. Only colors change between modes. Parts are daisyUI's own: list rows, ghost badges, chat bubbles, fieldsets, a dock on phones.\n\nScreens are dense. A day fits on one screen: rows are tighter than daisyUI's default, type is small, and there is no decoration. Phone and desk carry equal weight.",
+    "keyCharacteristics": [
+      "Every color and corner comes from the theme in `styles/app.css`.",
+      "One system sans, small sizes, tabular numerals everywhere.",
+      "Flat: no shadows. Depth is a white surface with a hairline border on a pale page.",
+      "One saturated blue, used for one action on a screen.",
+      "Status is a small dot. Words stay in the text color.",
+      "A quote is filled. A suggestion is dashed."
+    ],
+    "rules": [
+      {
+        "name": "The Theme-Only Rule",
+        "body": "Colors and shapes come only from the theme. No literal colors, no palette classes, no `dark:` variants. An organization's brand is a change to the theme blocks in `styles/app.css` and nothing else.",
+        "section": "colors"
+      },
+      {
+        "name": "The Dot-Not-Word Rule",
+        "body": "Status colors are dots and fills, never text. The words beside a dot stay in the text color, at medium weight when urgent.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Primary Rule",
+        "body": "One primary action per screen. A firm choice is neutral. Everything else is plain or ghost.",
+        "section": "colors"
+      },
+      {
+        "name": "The Eighty Rule",
+        "body": "Secondary text is `text-base-content/80` (the `MUTED` constant). It is the lightest step that keeps 4.5:1 on both `base-100` and `base-200`. Do not go lighter, and do not put it on a quote bubble.",
+        "section": "colors"
+      },
+      {
+        "name": "The Tabular Rule",
+        "body": "Numerals are tabular on the whole page, so times and counts line up in columns.",
+        "section": "typography"
+      },
+      {
+        "name": "The Three Weights Rule",
+        "body": "Regular, medium, semibold. Medium marks the thing a row is about. Semibold marks a heading or a button.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Rule",
+        "body": "Never add a shadow. To raise something, give it a surface and a border. To mark it, tint it or fill it with neutral.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do take every color and corner from the theme: `bg-base-100`, `text-base-content`, `btn-primary`, `rounded-box`, `rounded-field`.",
+      "Do use `MUTED` (`text-base-content/80`) for all secondary text.",
+      "Do show status as a dot with words beside it in the text color.",
+      "Do keep one primary button on a screen, and use neutral for a firm choice.",
+      "Do show a quote as a filled speech bubble with the speaker named, and a suggestion as a dashed outline with its two answers.",
+      "Do use `ROW` for every list row, and `Group` for every titled list.",
+      "Do put the result of an action next to the control that caused it.",
+      "Do make every new part work in both modes with no mode-specific classes, and check it in both.",
+      "Do change email colors in `styles/app.css`, then run `npm run email:theme`."
+    ],
+    "donts": [
+      "Don't write a literal color, a palette class such as `text-gray-700`, or a `dark:` variant.",
+      "Don't color text with a status color.",
+      "Don't add a second primary action to a screen.",
+      "Don't fill a suggestion or dash a quote.",
+      "Don't go lighter than 80% for text.",
+      "Don't add shadows or raise `--depth`.",
+      "Don't hand-edit `app/email/theme.generated.ts`, and don't give the email a dark version.",
+      "Don't use toasts."
+    ]
+  }
+}

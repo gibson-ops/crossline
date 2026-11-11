@@ -1,7 +1,12 @@
 node_modules/
 tmp/
 .DS_Store
-.impeccable/
+# Impeccable's design record (surface briefs, config) is committed; its working files are not.
+.impeccable/review/
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/hook.cache.json
+.impeccable/config.local.json
 .env
 # Built by `npm run css`.
 public/app.css

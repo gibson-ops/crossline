@@ -45,6 +45,34 @@ parameters. The result has `rows`.
   overrides the built-in Dark's four shape values with Winter's (`@plugin 'daisyui/theme' { name:
 'dark'; … }`), so only colors change with the mode.
 
+- **The email theme** is a generated copy of the daisyUI theme (`app/email/theme.generated.ts`),
+  because email clients read neither CSS variables nor `oklch()`. `npm run email:theme` rebuilds
+  it: `scripts/email-theme.mjs` reads `node_modules/daisyui/theme/winter.css` plus the app's own
+  `@plugin 'daisyui/theme' { name: 'winter'; … }` block in `styles/app.css`, and lowers the colors
+  to hex with Lightning CSS (`transform` with `targets: { ie: 11 << 16 }`). `test/email-theme.test.ts`
+  fails when the copy has drifted, and checks the email's text contrast.
+- **MJML 5.4.1** renders in this stack: `await mjml2html(markup, { validationLevel: 'strict' })`
+  returns `{ html, errors }` (it is async). Types come from `@types/mjml`. MJML attributes take
+  hex colors only. The email is built as an MJML string, with every value escaped for XML.
+- **Theme changes for contrast** (all in `styles/app.css`, with the reasons beside them): Winter's
+  `primary-content` is white (4.6:1 on its primary; Winter's own pale blue is 3.6:1); Winter's
+  success, warning and error are deeper, so a status dot reaches 3:1 on white; Dark's `neutral`
+  is light, so "neutral" is the strongest mark in both themes; field, checkbox and radio borders
+  are 65% of the text color (daisyUI's 20% is about 1.4:1) through `--input-color`; placeholders
+  are 80%. Secondary text is `text-base-content/80`, the lightest step that holds 4.5:1.
+- **Winter's status colors are pastel fills.** Never use them as text. State is a `status` dot
+  beside text in the content color.
+- **One column on phones, two on wide screens, without duplicate markup:** the columns' wrappers
+  are `contents` below `lg`, so their children become items of one flex column and `order-*`
+  sorts them; at `lg` the wrappers become real grid columns (`app/actions/design/my-list-page.tsx`).
+- **A detail pane without daisyUI's drawer:** the pane is ordinary page content chosen by `?open=`;
+  on phones it is `fixed inset-0` (a full-screen sheet), on wide screens a sticky column. No
+  checkbox, so no `data-rmx-key` workaround. `PanelKeys` (a client entry) closes it on Escape
+  with `navigate(closeHref)` and moves focus to the pane's heading when a record opens; its
+  listener is removed with `handle.signal`.
+- **Forcing a theme for review:** design pages take `?theme=winter|dark`, which sets `data-theme`
+  on `<html>`. Without it the device decides.
+
 ## daisyUI in Remix 3
 
 Verified in the design trial (`~/code/gibson-ops/crossline-design-trial`), 2026-11-10.

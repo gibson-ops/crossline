@@ -9,8 +9,13 @@ export function HomePage() {
     <Document>
       <main class="mx-auto max-w-xl px-4 py-12">
         <h1 class="text-2xl font-semibold">Crossline</h1>
-        <p class="text-base-content/70 mt-2">The foundation is running. Pages come with the design system.</p>
-        <p class="mt-4">
+        <p class="text-base-content/80 mt-2">
+          The foundation and the design system are in place. Real pages come next.
+        </p>
+        <p class="mt-4 flex gap-4">
+          <a class="link" href="/design">
+            Design system
+          </a>
           <a class="link" href="/health">
             Health check
           </a>

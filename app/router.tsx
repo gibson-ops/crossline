@@ -5,6 +5,7 @@ import { render } from 'remix/middleware/render'
 import { staticFiles } from 'remix/middleware/static'
 
 import controller from './actions/controller.tsx'
+import designController from './actions/design/controller.tsx'
 import { ErrorPage } from './actions/error-page.tsx'
 import { assets } from './assets.ts'
 import { noStoreByDefault } from './middleware/cache.ts'
@@ -47,6 +48,7 @@ export function createAppRouter(runtime: AppRuntime) {
     ],
   })
   router.map(routes, controller)
+  router.map(routes.design, designController)
   return router
 }
 

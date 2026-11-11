@@ -14,8 +14,25 @@
 }
 
 /*
+ * Winter, with five values changed so it meets WCAG AA in this app:
+ * - text on the primary button is white (Winter's pale blue is 3.6:1 on its primary; white is 4.6:1);
+ * - the status colors are deeper, because here they are small dots that must stand out from
+ *   white (3:1 or better); Winter's are pastel fills.
+ */
+@plugin 'daisyui/theme' {
+  name: 'winter';
+  default: true;
+  --color-primary-content: oklch(100% 0 0);
+  --color-success: oklch(58% 0.13 165);
+  --color-warning: oklch(64% 0.15 65);
+  --color-error: oklch(58% 0.21 25);
+  --color-error-content: oklch(100% 0 0);
+}
+
+/*
  * Dark keeps its own colors but takes Winter's shape (corner sizes and a flat look), so only
  * the colors change with the mode. The built-in Dark has smaller corners and --depth: 1.
+ * Its neutral pair and the label on its primary button are changed (see below).
  */
 @plugin 'daisyui/theme' {
   name: 'dark';
@@ -24,4 +41,50 @@
   --radius-field: 0.5rem;
   --radius-box: 1rem;
   --depth: 0;
+  /*
+   * In this app "neutral" marks the strongest thing on a surface: the current place, a firm yes,
+   * the marked line. Dark's own neutral is near-black, which recedes on a dark surface, so here
+   * it is light with dark text, as Winter's is dark with light text.
+   */
+  --color-neutral: oklch(92% 0.02 257);
+  --color-neutral-content: oklch(22% 0.03 257);
+  /* The label on the primary button is white, as in light mode (4.7:1; Dark's own is 4.1:1). */
+  --color-primary-content: oklch(100% 0 0);
+}
+
+/*
+ * The parts of the page the browser draws, themed from the same palette: selected text, the
+ * text cursor, focus rings on plain links, and numerals that line up in columns.
+ */
+@layer base {
+  ::selection {
+    background-color: color-mix(in oklab, var(--color-primary) 22%, transparent);
+  }
+
+  :root {
+    caret-color: var(--color-primary);
+    font-variant-numeric: tabular-nums;
+  }
+
+  a:focus-visible,
+  summary:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-selector);
+  }
+}
+
+/*
+ * daisyUI draws field, checkbox and radio borders at 20% of the text color (about 1.4:1 on
+ * white) and placeholders lighter than body text. WCAG AA asks 3:1 for a control's edge and
+ * 4.5:1 for its text, so both are raised here. Fields with a state color keep that color.
+ */
+:is(.input, .select, .textarea):not(.input-error, .select-error, .textarea-error),
+:is(.checkbox, .radio) {
+  --input-color: color-mix(in oklab, var(--color-base-content) 65%, transparent);
+}
+
+:is(.input, .textarea)::placeholder {
+  color: color-mix(in oklab, var(--color-base-content) 80%, transparent);
+  opacity: 1;
 }
