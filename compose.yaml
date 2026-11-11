@@ -1,0 +1,21 @@
+# Local Postgres for development and tests. Nothing else in the app depends on Docker.
+# The port is claimed in relay as port:5441.
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: crossline
+      POSTGRES_PASSWORD: crossline
+      POSTGRES_DB: crossline
+    ports:
+      - '127.0.0.1:5441:5432'
+    volumes:
+      - crossline-postgres:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U crossline -d crossline']
+      interval: 2s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  crossline-postgres:

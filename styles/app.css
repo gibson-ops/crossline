@@ -1,0 +1,27 @@
+/*
+ * The app's one stylesheet: Tailwind plus daisyUI. Built to public/app.css by `npm run css`.
+ * Colors, corner sizes and depth come from the daisyUI theme, never from literal values in
+ * components, so an instance's brand is a change to this file's theme blocks only.
+ */
+@import 'tailwindcss';
+@source '../app';
+
+@plugin 'daisyui' {
+  /* Winter is the light theme. Dark is used when the device asks for dark. */
+  themes:
+    winter --default,
+    dark --prefersdark;
+}
+
+/*
+ * Dark keeps its own colors but takes Winter's shape (corner sizes and a flat look), so only
+ * the colors change with the mode. The built-in Dark has smaller corners and --depth: 1.
+ */
+@plugin 'daisyui/theme' {
+  name: 'dark';
+  prefersdark: true;
+  --radius-selector: 1rem;
+  --radius-field: 0.5rem;
+  --radius-box: 1rem;
+  --depth: 0;
+}
